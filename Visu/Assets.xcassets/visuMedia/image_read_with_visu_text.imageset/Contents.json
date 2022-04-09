@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "image_read_with_visu_text.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "image_welcome_text.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

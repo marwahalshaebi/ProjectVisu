@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>233046723860-gkc6e2k8aq6qb3p2srid8at1li0q5n5v.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.233046723860-gkc6e2k8aq6qb3p2srid8at1li0q5n5v</string>
+	<key>API_KEY</key>
+	<string>AIzaSyChmjdvdWVER3xxBbBHme0OdJMfU8XSawA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>233046723860</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>tempAppProject.Visu</string>
+	<key>PROJECT_ID</key>
+	<string>visudatabase</string>
+	<key>STORAGE_BUCKET</key>
+	<string>visudatabase.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:233046723860:ios:fc27b768d6d9402a1f0601</string>
+</dict>
+</plist>
