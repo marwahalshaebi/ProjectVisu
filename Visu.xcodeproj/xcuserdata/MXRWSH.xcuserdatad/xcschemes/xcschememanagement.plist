@@ -28,7 +28,25 @@
 		<key>Visu.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>8E58C82927C6FE7000CD0C2F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8E58C83927C6FE7200CD0C2F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8E58C84327C6FE7200CD0C2F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

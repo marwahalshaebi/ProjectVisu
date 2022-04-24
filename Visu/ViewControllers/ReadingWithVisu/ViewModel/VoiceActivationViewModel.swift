@@ -9,12 +9,12 @@ import SwiftUI
 import Combine
 
 class VoiceActivationViewModel: ObservableObject {
-
+    // MARK: Class' Variables
     @Published var word: String = ""
     @Published var score: Int = 0
-
     private var words: [String] = []
     private var cancellable = Set<AnyCancellable>()
+    
     // (() -> ())? a closure with no paramteres, void -> void
     var onClearSpeech: (() -> ())? = nil
     var onWrongSpeak: (() -> ())? = nil
@@ -43,11 +43,12 @@ class VoiceActivationViewModel: ObservableObject {
     }
 
     func processedNewWord(_ message: String) {
-        print("--- User Said --- : \(message)")
+        print("-- Listening for --- : [ \(word) ]")
+        print("--- User Said --- : [ \(message) ]")
         if message.lowercased().contains(word) {
             Task {
                 await reloadWord()
-                print("[Task] -- Now Listening for \(self.word) ")
+                print("[Task] -- Now Listening for [ \(self.word) ] ")
 
                 
             }

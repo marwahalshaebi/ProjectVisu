@@ -8,11 +8,14 @@
 import Foundation
 import Combine
 
+// MARK: enum to check auth state
 enum SignUpState{
     case successfull
     case failed(error: Error)
     case na
 }
+
+// class definitions
 protocol SignUpModel{
     func register()
     var errorOccured: Bool { get }
@@ -35,7 +38,7 @@ final class SignUpModelImplementation: ObservableObject, SignUpModel {
         setupErrorHandling()
     }
     
-    // registering a user
+    // registering a user, Firebase and Combine documentation, inspo https://stackoverflow.com/questions/68844655/ios-swiftui-main-thread-1-exc-bad-access-code-2-address-0x7ffee1a57ff0 
     func register() {
         service.register(with: userDetails)
             .sink { [weak self] res in

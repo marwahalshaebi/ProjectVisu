@@ -20,8 +20,11 @@ enum SignUpKeys: String {
 
 // Any publisher will rerturn a publisher we can subscribe to, Void will be the successful state. and error will be used for testing and debugging
 protocol SignUpProtocol {
+    // returns a publisher
     func register(with details: SignUpDetails) -> AnyPublisher<Void, Error>
 }
+
+// See https://firebase.google.com/docs/database/ios/ for code reference
 
 final class SignUpProtocolImplementation: SignUpProtocol {
     func register (with details: SignUpDetails) -> AnyPublisher<Void, Error> {
@@ -57,7 +60,7 @@ final class SignUpProtocolImplementation: SignUpProtocol {
                     }
             }
         }
-        .receive(on: RunLoop.main) // recieving on the main thread to manipulate ui
+        .receive(on: RunLoop.main) // recieving on the main thread to update ui
         .eraseToAnyPublisher()
     }
 }

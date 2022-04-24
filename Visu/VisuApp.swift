@@ -11,17 +11,19 @@ import Firebase
 @main
 struct VisuApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    @StateObject var sessionProtocol = SessionProtocolImplementation()
+    // this state object is incharge of passing user informtation around views
+    @StateObject var session = SessionProtocolImplementation()
     var body: some Scene {
         WindowGroup {
             NavigationView{
-                
-                switch sessionProtocol.state {
+                // Implemented keeping track of user's log in state
+                switch session.state {
                 case .loggedOut:
-                    PlayTrackView()
-                        .environmentObject(sessionProtocol)
+                    GetStartedView()
+                        .environmentObject(session)
                 case .loggedIn:
-                    PlayTrackView()
+                    WelcomeView()
+                        .environmentObject(session)
                 }
             }
             

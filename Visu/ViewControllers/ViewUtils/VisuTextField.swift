@@ -2,7 +2,7 @@
 //  VisuTextField.swift
 //  Visu
 //
-//  Created by iMac on 04/03/22.
+//  Created by Marwah Alshaebi on 2022-03-04.
 //
 
 import SwiftUI
@@ -13,7 +13,8 @@ struct VisuTextField: View {
     @Binding var text: String
 
     var securefeild: Bool = false
-
+    
+    // MARK: VIEW
     var body: some View {
         VStack(spacing: 6) {
             HStack {

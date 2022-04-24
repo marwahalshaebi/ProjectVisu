@@ -7,11 +7,13 @@
 
 import Foundation
 
+// MARK: variables
 struct SigninCredentials{
     var email: String
     var password: String
 }
 
+// MARK: constructor
 extension SigninCredentials {
     static var new: SigninCredentials {
         SigninCredentials(email: "", password: "")

@@ -10,23 +10,25 @@ import FirebaseAuth
 import FirebaseDatabase
 import Firebase
 
-struct VoiceDetectionActivatedView: View {
-
+struct ReadingExercise: View {
+    
+    // MARK: variables and state objects
     @StateObject private var VAModel = VoiceActivationViewModel()
     @StateObject var speechRecognizer = SpeechRecognizer()
     @State private var showFailedAlert: Bool = false
-    @State private var showDetailScreen: Bool = false
+    @State private var showNextScreen: Bool = false
     @State var isRecording = false
     let uid = Auth.auth().currentUser?.uid
     var ref = Database.database().reference()
+    @State var userScore: Int = 0
     // close view
     @Environment(\.dismiss) var dismiss
 
-
+    // MARK: VIEW
     var body: some View {
         ZStack {
             Color("green")
-            NavigationLink(destination: PlayTrackView(), isActive: $showDetailScreen) {
+            NavigationLink(destination: PlayTrackView(), isActive: $showNextScreen) {
                 EmptyView()
             }
             VStack {
@@ -61,22 +63,29 @@ struct VoiceDetectionActivatedView: View {
                 Spacer()
                 VisuButton(title: "END") {
                     print("end button clicked")
-                    // update user's score
-                    print("updating to user: \(uid!)")
-                    ref.child("users/\(uid!)/readingScore").setValue(VAModel.score)
+                    
+                    // update user's score ONLY if it's the highest recorded score
+                   
+                    if VAModel.score > userScore {
+                        ref.child("users/\(uid!)/readingScore").setValue(VAModel.score)
+                        print("updating to user: \(uid!)")
+                    }
                     dismiss()
                     
                 }
                 .frame(width: Constant.screenWidth * 0.8)
-                .shadow(color: Color.black.opacity(0.3), radius: 5, x: 5, y: 5)
-                .shadow(color: Color.blue.opacity(0.3), radius: 5, x: 5, y: 5)
-                .padding(.bottom,50)
+                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4, y: 4)
+                .shadow(color: Color.blue.opacity(0.1), radius: 5, x: 4, y: 4)
+                .padding(.bottom, 30)
+                
             }
 
 
         }
         .edgesIgnoringSafeArea(.all)
         .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
+        
         .alert("Didn't match the word, try again?", isPresented: $showFailedAlert, actions: {
             Button("No", role: .destructive, action: {})
             Button("Yes", role: .cancel, action: {
@@ -85,10 +94,22 @@ struct VoiceDetectionActivatedView: View {
             })
         })
         .onAppear(perform: {
-            print("[Task] -- Now Listening")
+            
+            // fetch user's info
+            ref.child("users").child(uid!).getData(completion: { error, snapshot in
+                guard error == nil else {
+                    print(error!.localizedDescription)
+                    return;
+                }
+                if let dictionary = snapshot.value as? [String: Any]{
+                    userScore = dictionary["readingScore"] as! Int
+                }
+                print("fetched score \(userScore)")
+            })
             speechRecognizer.reset()
             speechRecognizer.transcribe()
             bindSpeechToViewModel()
+            
             
         })
         .onDisappear {
@@ -126,7 +147,7 @@ struct VoiceDetectionActivatedView: View {
 
 struct VoiceDetectionActivatedView_Previews: PreviewProvider {
     static var previews: some View {
-        VoiceDetectionActivatedView()
+        ReadingExercise()
 .previewInterfaceOrientation(.landscapeRight)
     }
 }

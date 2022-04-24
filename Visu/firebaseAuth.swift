@@ -9,6 +9,8 @@ import SwiftUI
 import FirebaseAuth
 import Firebase
 
+// back up authentication logic I implemented referenced from Firebase documentation 
+
 class firebaseAuth: ObservableObject {
     let auth = Auth.auth()
     @Published var signedIn = false

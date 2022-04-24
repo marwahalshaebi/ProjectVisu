@@ -20,7 +20,6 @@
 		88C5CE1127D5E39E00E686EC /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C5CE1027D5E39E00E686EC /* SpeechRecognizer.swift */; };
 		88F1D51527D3264F00014C32 /* ReadWithVisuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1D51427D3264E00014C32 /* ReadWithVisuView.swift */; };
 		88F1D51727D32C9B00014C32 /* ChooseTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1D51627D32C9B00014C32 /* ChooseTaskView.swift */; };
-		88F1D51927D331FD00014C32 /* VoiceDetectionActivatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1D51827D331FD00014C32 /* VoiceDetectionActivatedView.swift */; };
 		8E06762827C7FD8F008EA650 /* Nunito.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E06762727C7FD8E008EA650 /* Nunito.ttf */; };
 		8E06762A27C8093C008EA650 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E06762927C8093C008EA650 /* SignUpView.swift */; };
 		8E06762C27C819DA008EA650 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E06762B27C819DA008EA650 /* GoogleService-Info.plist */; };
@@ -44,16 +43,18 @@
 		8E06765627C81B1A008EA650 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8E06765527C81B1A008EA650 /* FirebaseStorage */; };
 		8E06765827C81B1A008EA650 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 8E06765727C81B1A008EA650 /* FirebaseStorageSwift-Beta */; };
 		8E06765A27C8226D008EA650 /* firebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E06765927C8226D008EA650 /* firebaseAuth.swift */; };
-		8E0A9FB72802159A00033A11 /* RoboCatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A9FB62802159A00033A11 /* RoboCatViewModel.swift */; };
+		8E43260928071CAF002208CF /* SoundEffectsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E43260828071CAF002208CF /* SoundEffectsModel.swift */; };
+		8E43260D2807216C002208CF /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E43260B2807216B002208CF /* tick.mp3 */; };
+		8E43260E2807216C002208CF /* meow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E43260C2807216B002208CF /* meow.mp3 */; };
 		8E58C82E27C6FE7000CD0C2F /* VisuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58C82D27C6FE7000CD0C2F /* VisuApp.swift */; };
 		8E58C83027C6FE7000CD0C2F /* GetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58C82F27C6FE7000CD0C2F /* GetStartedView.swift */; };
 		8E58C83227C6FE7200CD0C2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E58C83127C6FE7200CD0C2F /* Assets.xcassets */; };
 		8E58C83527C6FE7200CD0C2F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E58C83427C6FE7200CD0C2F /* Preview Assets.xcassets */; };
-		8E58C83F27C6FE7200CD0C2F /* VisuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58C83E27C6FE7200CD0C2F /* VisuTests.swift */; };
-		8E58C84927C6FE7200CD0C2F /* VisuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58C84827C6FE7200CD0C2F /* VisuUITests.swift */; };
-		8E58C84B27C6FE7200CD0C2F /* VisuUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58C84A27C6FE7200CD0C2F /* VisuUITestsLaunchTests.swift */; };
 		8E58C85827C7212000CD0C2F /* SigninSignup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58C85727C7212000CD0C2F /* SigninSignup.swift */; };
 		8E58C85B27C724ED00CD0C2F /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58C85A27C724ED00CD0C2F /* SignInView.swift */; };
+		8E6AFADB280F7A840084AAF6 /* ReadingExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6AFADA280F7A840084AAF6 /* ReadingExercise.swift */; };
+		8E8926082813A2FD0064C1E2 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8926072813A2FD0064C1E2 /* BackButton.swift */; };
+		8E89260A28148D840064C1E2 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89260928148D840064C1E2 /* SideMenu.swift */; };
 		8E9C6D4927F15C53001EBF1C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8E9C6D4827F15C53001EBF1C /* FirebaseAnalytics */; };
 		8E9C6D4B27F15C53001EBF1C /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 8E9C6D4A27F15C53001EBF1C /* FirebaseAnalyticsSwift-Beta */; };
 		8E9C6D4D27F15C53001EBF1C /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 8E9C6D4C27F15C53001EBF1C /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -82,6 +83,7 @@
 		8EB36B6927ED63100055D59E /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB36B6827ED63100055D59E /* ForgotPassword.swift */; };
 		8EB36B6B27ED66480055D59E /* ForgotPasswordProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB36B6A27ED66480055D59E /* ForgotPasswordProtocol.swift */; };
 		8EB36B6D27ED67A60055D59E /* ForgotPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB36B6C27ED67A60055D59E /* ForgotPasswordModel.swift */; };
+		8EC246522814A95F00F42CD9 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC246512814A95F00F42CD9 /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,25 +117,26 @@
 		88C5CE1027D5E39E00E686EC /* SpeechRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		88F1D51427D3264E00014C32 /* ReadWithVisuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWithVisuView.swift; sourceTree = "<group>"; };
 		88F1D51627D32C9B00014C32 /* ChooseTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTaskView.swift; sourceTree = "<group>"; };
-		88F1D51827D331FD00014C32 /* VoiceDetectionActivatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceDetectionActivatedView.swift; sourceTree = "<group>"; };
 		8E06762727C7FD8E008EA650 /* Nunito.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nunito.ttf; sourceTree = "<group>"; };
 		8E06762927C8093C008EA650 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		8E06762B27C819DA008EA650 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8E06765927C8226D008EA650 /* firebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseAuth.swift; sourceTree = "<group>"; };
-		8E0A9FB62802159A00033A11 /* RoboCatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoboCatViewModel.swift; sourceTree = "<group>"; };
 		8E29F33027F9F22B004C52B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8E43260828071CAF002208CF /* SoundEffectsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffectsModel.swift; sourceTree = "<group>"; };
+		8E43260B2807216B002208CF /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
+		8E43260C2807216B002208CF /* meow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meow.mp3; sourceTree = "<group>"; };
 		8E58C82A27C6FE7000CD0C2F /* Visu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Visu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E58C82D27C6FE7000CD0C2F /* VisuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisuApp.swift; sourceTree = "<group>"; };
 		8E58C82F27C6FE7000CD0C2F /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
 		8E58C83127C6FE7200CD0C2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E58C83427C6FE7200CD0C2F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8E58C83A27C6FE7200CD0C2F /* VisuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E58C83E27C6FE7200CD0C2F /* VisuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisuTests.swift; sourceTree = "<group>"; };
 		8E58C84427C6FE7200CD0C2F /* VisuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E58C84827C6FE7200CD0C2F /* VisuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisuUITests.swift; sourceTree = "<group>"; };
-		8E58C84A27C6FE7200CD0C2F /* VisuUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisuUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8E58C85727C7212000CD0C2F /* SigninSignup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninSignup.swift; sourceTree = "<group>"; };
 		8E58C85A27C724ED00CD0C2F /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		8E6AFADA280F7A840084AAF6 /* ReadingExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingExercise.swift; sourceTree = "<group>"; };
+		8E8926072813A2FD0064C1E2 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		8E89260928148D840064C1E2 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		8EB36B5527ECF6960055D59E /* SignUpDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDetails.swift; sourceTree = "<group>"; };
 		8EB36B5727ECF72B0055D59E /* SignUpProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProtocol.swift; sourceTree = "<group>"; };
 		8EB36B5927ECFC970055D59E /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
@@ -145,6 +148,7 @@
 		8EB36B6827ED63100055D59E /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		8EB36B6A27ED66480055D59E /* ForgotPasswordProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordProtocol.swift; sourceTree = "<group>"; };
 		8EB36B6C27ED67A60055D59E /* ForgotPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordModel.swift; sourceTree = "<group>"; };
+		8EC246512814A95F00F42CD9 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,19 +214,14 @@
 		8878F76227D206AD00ECB529 /* ViewUtils */ = {
 			isa = PBXGroup;
 			children = (
+				8878F76927D20ADC00ECB529 /* Constants.swift */,
+				8E89260928148D840064C1E2 /* SideMenu.swift */,
 				8878F76327D206D200ECB529 /* SqureCornerRadius.swift */,
 				8878F76527D209F900ECB529 /* VisuButton.swift */,
 				8878F76B27D2165F00ECB529 /* VisuTextField.swift */,
+				8E8926072813A2FD0064C1E2 /* BackButton.swift */,
 			);
 			path = ViewUtils;
-			sourceTree = "<group>";
-		};
-		8878F76727D20AC000ECB529 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				8878F76927D20ADC00ECB529 /* Constants.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		88C5CE0927D5CFB900E686EC /* Resource */ = {
@@ -245,9 +244,10 @@
 		8E0A9FB528020C2300033A11 /* TrackRoboCat */ = {
 			isa = PBXGroup;
 			children = (
+				8E43260A28072153002208CF /* sound effects */,
 				88A63B5D27D2350B00264432 /* PlayTrackView.swift */,
 				88A63B5F27D2430A00264432 /* TrackRoboCatView.swift */,
-				8E0A9FB62802159A00033A11 /* RoboCatViewModel.swift */,
+				8E43260828071CAF002208CF /* SoundEffectsModel.swift */,
 			);
 			path = TrackRoboCat;
 			sourceTree = "<group>";
@@ -258,6 +258,9 @@
 				8E58C82F27C6FE7000CD0C2F /* GetStartedView.swift */,
 				8E58C85727C7212000CD0C2F /* SigninSignup.swift */,
 				88A63B5927D234D200264432 /* WelcomeView.swift */,
+				88F1D51627D32C9B00014C32 /* ChooseTaskView.swift */,
+				88A63B5B27D234E100264432 /* StartView.swift */,
+				8EC246512814A95F00F42CD9 /* UserProfile.swift */,
 			);
 			path = MainPages;
 			sourceTree = "<group>";
@@ -266,10 +269,19 @@
 			isa = PBXGroup;
 			children = (
 				88F1D51427D3264E00014C32 /* ReadWithVisuView.swift */,
-				88F1D51827D331FD00014C32 /* VoiceDetectionActivatedView.swift */,
+				8E6AFADA280F7A840084AAF6 /* ReadingExercise.swift */,
 				88C5CE0C27D5D3F200E686EC /* ViewModel */,
 			);
 			path = ReadingWithVisu;
+			sourceTree = "<group>";
+		};
+		8E43260A28072153002208CF /* sound effects */ = {
+			isa = PBXGroup;
+			children = (
+				8E43260C2807216B002208CF /* meow.mp3 */,
+				8E43260B2807216B002208CF /* tick.mp3 */,
+			);
+			path = "sound effects";
 			sourceTree = "<group>";
 		};
 		8E58C82127C6FE7000CD0C2F = {
@@ -277,7 +289,6 @@
 			children = (
 				8E58C82C27C6FE7000CD0C2F /* Visu */,
 				8E58C83D27C6FE7200CD0C2F /* VisuTests */,
-				8E58C84727C6FE7200CD0C2F /* VisuUITests */,
 				8E58C82B27C6FE7000CD0C2F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -299,7 +310,6 @@
 				8E58C82D27C6FE7000CD0C2F /* VisuApp.swift */,
 				8E06765927C8226D008EA650 /* firebaseAuth.swift */,
 				88C5CE0927D5CFB900E686EC /* Resource */,
-				8878F76727D20AC000ECB529 /* Utils */,
 				8E58C85927C724CD00CD0C2F /* ViewControllers */,
 				8E58C83127C6FE7200CD0C2F /* Assets.xcassets */,
 				8E06762727C7FD8E008EA650 /* Nunito.ttf */,
@@ -320,18 +330,8 @@
 		8E58C83D27C6FE7200CD0C2F /* VisuTests */ = {
 			isa = PBXGroup;
 			children = (
-				8E58C83E27C6FE7200CD0C2F /* VisuTests.swift */,
 			);
 			path = VisuTests;
-			sourceTree = "<group>";
-		};
-		8E58C84727C6FE7200CD0C2F /* VisuUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8E58C84827C6FE7200CD0C2F /* VisuUITests.swift */,
-				8E58C84A27C6FE7200CD0C2F /* VisuUITestsLaunchTests.swift */,
-			);
-			path = VisuUITests;
 			sourceTree = "<group>";
 		};
 		8E58C85927C724CD00CD0C2F /* ViewControllers */ = {
@@ -345,8 +345,6 @@
 				8EB36B6027ED59640055D59E /* Login */,
 				8EB36B5B27ED3E8F0055D59E /* Session */,
 				8878F76227D206AD00ECB529 /* ViewUtils */,
-				88A63B5B27D234E100264432 /* StartView.swift */,
-				88F1D51627D32C9B00014C32 /* ChooseTaskView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -537,11 +535,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E43260E2807216C002208CF /* meow.mp3 in Resources */,
 				8E58C83527C6FE7200CD0C2F /* Preview Assets.xcassets in Resources */,
 				8E06762C27C819DA008EA650 /* GoogleService-Info.plist in Resources */,
 				8E06762827C7FD8F008EA650 /* Nunito.ttf in Resources */,
 				8E58C83227C6FE7200CD0C2F /* Assets.xcassets in Resources */,
 				88C5CE0B27D5CFC800E686EC /* words.json in Resources */,
+				8E43260D2807216C002208CF /* tick.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,8 +569,10 @@
 			files = (
 				8E06765A27C8226D008EA650 /* firebaseAuth.swift in Sources */,
 				8EB36B6227ED59940055D59E /* SigninCredentials.swift in Sources */,
+				8E6AFADB280F7A840084AAF6 /* ReadingExercise.swift in Sources */,
 				8E58C83027C6FE7000CD0C2F /* GetStartedView.swift in Sources */,
 				8EB36B5627ECF6960055D59E /* SignUpDetails.swift in Sources */,
+				8E89260A28148D840064C1E2 /* SideMenu.swift in Sources */,
 				8E06762A27C8093C008EA650 /* SignUpView.swift in Sources */,
 				88A63B5C27D234E100264432 /* StartView.swift in Sources */,
 				88A63B5E27D2350B00264432 /* PlayTrackView.swift in Sources */,
@@ -581,6 +583,7 @@
 				8EB36B6B27ED66480055D59E /* ForgotPasswordProtocol.swift in Sources */,
 				8EB36B6927ED63100055D59E /* ForgotPassword.swift in Sources */,
 				88C5CE1127D5E39E00E686EC /* SpeechRecognizer.swift in Sources */,
+				8EC246522814A95F00F42CD9 /* UserProfile.swift in Sources */,
 				8878F76C27D2166000ECB529 /* VisuTextField.swift in Sources */,
 				8878F76627D209F900ECB529 /* VisuButton.swift in Sources */,
 				88C5CE0E27D5D41900E686EC /* VoiceActivationViewModel.swift in Sources */,
@@ -588,16 +591,16 @@
 				8EB36B5F27ED3F1D0055D59E /* SessionProtocol.swift in Sources */,
 				8EB36B6D27ED67A60055D59E /* ForgotPasswordModel.swift in Sources */,
 				8E58C82E27C6FE7000CD0C2F /* VisuApp.swift in Sources */,
-				8E0A9FB72802159A00033A11 /* RoboCatViewModel.swift in Sources */,
 				88A63B6027D2430A00264432 /* TrackRoboCatView.swift in Sources */,
 				88F1D51527D3264F00014C32 /* ReadWithVisuView.swift in Sources */,
+				8E8926082813A2FD0064C1E2 /* BackButton.swift in Sources */,
 				88F1D51727D32C9B00014C32 /* ChooseTaskView.swift in Sources */,
+				8E43260928071CAF002208CF /* SoundEffectsModel.swift in Sources */,
 				8EB36B5827ECF72B0055D59E /* SignUpProtocol.swift in Sources */,
 				8EB36B6627ED5B1A0055D59E /* SigninModel.swift in Sources */,
 				8EB36B5A27ECFC970055D59E /* SignUpModel.swift in Sources */,
 				8EB36B5D27ED3EB60055D59E /* SessionUserDetails.swift in Sources */,
 				8878F76A27D20ADC00ECB529 /* Constants.swift in Sources */,
-				88F1D51927D331FD00014C32 /* VoiceDetectionActivatedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,7 +608,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E58C83F27C6FE7200CD0C2F /* VisuTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,8 +615,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E58C84927C6FE7200CD0C2F /* VisuUITests.swift in Sources */,
-				8E58C84B27C6FE7200CD0C2F /* VisuUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,8 +9,10 @@ import AVFoundation
 import Foundation
 import Speech
 
-// This class's purpose is for transcribing speech to text using SFSpeechRecognizer and AVAudioEngine. This class is referenced from Apple iOS developer documentation
+// MARK: This class's purpose is for transcribing speech to text using SFSpeechRecognizer and AVAudioEngine. This class is referenced from Apple iOS developer documentation
+
 class SpeechRecognizer: ObservableObject {
+    // Enums helps in encapsulating use cases for error checking
     enum RecognizerError: Error {
         case nilRecognizer
         case notAuthorizedToRecognize
@@ -20,8 +22,8 @@ class SpeechRecognizer: ObservableObject {
         var message: String {
             switch self {
             case .nilRecognizer: return "Can't initialize speech recognizer"
-            case .notAuthorizedToRecognize: return "Not authorized to recognize speech"
-            case .notPermittedToRecord: return "Not permitted to record audio"
+            case .notAuthorizedToRecognize: return "Authorization not permitted"
+            case .notPermittedToRecord: return "Audio recording not permitted"
             case .recognizerIsUnavailable: return "Recognizer is unavailable"
             }
         }
@@ -34,7 +36,8 @@ class SpeechRecognizer: ObservableObject {
             }
         }
     }
-
+    
+    // MARK: variables
     private var audioEngine: AVAudioEngine?
     private var request: SFSpeechAudioBufferRecognitionRequest?
     private var task: SFSpeechRecognitionTask?
@@ -67,7 +70,7 @@ class SpeechRecognizer: ObservableObject {
         reset()
     }
 
-    //Begin transcribing audio. Creates a `SFSpeechRecognitionTask` that transcribes speech to text until you call `stopTranscribing()`.
+    //Begin transcribing audio. Creates a SFSpeechRecognitionTask that transcribes speech to text until you call `stopTranscribing()`.
     //The resulting transcription is continuously written
      
     func transcribe() {
@@ -105,20 +108,25 @@ class SpeechRecognizer: ObservableObject {
         task = nil
     }
 
+    // MARK: see  https://developer.apple.com/documentation/speech/recognizing_speech_in_live_audio for code refernce and inspo
+    
     private static func prepareEngine() throws -> (AVAudioEngine, SFSpeechAudioBufferRecognitionRequest) {
         let audioEngine = AVAudioEngine()
 
         let request = SFSpeechAudioBufferRecognitionRequest()
         request.shouldReportPartialResults = true
-
+        // Configure the audio session for the app.
         let audioSession = AVAudioSession.sharedInstance()
         try audioSession.setCategory(.record, mode: .measurement, options: .duckOthers)
         try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
         let inputNode = audioEngine.inputNode
-
+        
+        // InputNode creates a singleton for the incoming audio.
+        // Configure the microphone input.
+        
         let recordingFormat = inputNode.outputFormat(forBus: 0)
         inputNode.removeTap(onBus: 0)
-        sleep(1)
+        sleep(1) // needed for system version conflicts
         inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer: AVAudioPCMBuffer, when: AVAudioTime) in
             request.append(buffer)
         }

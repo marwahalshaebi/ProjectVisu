@@ -35,7 +35,7 @@ final class SigninModelImplementation: ObservableObject, SigninModel {
         self.service = service
         setupErrorSubscriptions()
     }
-    
+    // signing in a user, Firebase and Combine documentation, inspo https://stackoverflow.com/questions/68844655/ios-swiftui-main-thread-1-exc-bad-access-code-2-address-0x7ffee1a57ff0
     func signin() {
         service.signin(with: credentials)
             .sink { [weak self] res in
@@ -52,8 +52,7 @@ final class SigninModelImplementation: ObservableObject, SigninModel {
     }
 }
 
-// handle sign in errors
-
+// handle sign in errors, Firebase documentation, Combine authentication tutorials 
 private extension SigninModelImplementation {
     func setupErrorSubscriptions () {
         $state

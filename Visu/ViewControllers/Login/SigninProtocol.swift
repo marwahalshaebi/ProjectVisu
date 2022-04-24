@@ -17,7 +17,7 @@ final class SigninProtocolImplementation: SigninProtocol {
     func signin(with credentials: SigninCredentials) -> AnyPublisher<Void, Error> {
         Deferred {
             Future { promise in
-                // firebase documentation
+                // Firebase documentation
                 Auth.auth().signIn(withEmail: credentials.email,
                             password: credentials.password) { res, error in
                         if let err = error {

@@ -8,6 +8,7 @@
 import Foundation
 
 struct SignUpDetails{
+    // MARK: variables
     var email: String
     var password: String
     var name: String
@@ -16,7 +17,7 @@ struct SignUpDetails{
 }
 
 extension SignUpDetails {
-    
+    // MARK: Class constructor 
     static var new: SignUpDetails {
         SignUpDetails(email: "", password: "", name: "", readingScore: 0, findRoboCatScore: 0)
     }

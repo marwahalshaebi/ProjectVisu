@@ -8,6 +8,8 @@
 import Combine
 import Foundation
 import Firebase
+
+// protocol is similar to static classes, the definitions that follow the protocl must be defined
 protocol ForgotPasswordModel {
     func sendPasswordReset ()
     var service: ForgotPasswordProtocol { get }
@@ -16,6 +18,7 @@ protocol ForgotPasswordModel {
 }
 final class ForgotPasswordModelImplementation: ObservableObject, ForgotPasswordModel {
     
+    // MARK: variables
     @Published var email: String = ""
     let service: ForgotPasswordProtocol
     private var subscriptions = Set<AnyCancellable>()
@@ -24,6 +27,7 @@ final class ForgotPasswordModelImplementation: ObservableObject, ForgotPasswordM
         self.service = service
     }
     
+    // similar to sign up/registeratiuon logic 
     func sendPasswordReset () {
         service.sendPasswordReset(to: email)
             .sink { res in
@@ -34,7 +38,7 @@ final class ForgotPasswordModelImplementation: ObservableObject, ForgotPasswordM
                 default: break
                 }
             }receiveValue: {
-                print("Sent Password Reset Request")
+                print("Sent Password Reset Request!")
             }
             .store(in: &subscriptions)
     }

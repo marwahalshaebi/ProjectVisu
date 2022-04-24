@@ -16,7 +16,6 @@ protocol ForgotPasswordProtocol {
 final class ForgotPasswordProtocolImplementation: ForgotPasswordProtocol {
     
     // Firebase documentation
-    
     func sendPasswordReset (to email: String) -> AnyPublisher<Void, Error> {
         Deferred {
              Future { promise in
