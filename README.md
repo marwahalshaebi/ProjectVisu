@@ -1,5 +1,5 @@
 # ProjectVisu
-COMP4905 HONOURS PROJECT 
+
 
 
 Make sure you have XCode IDE. 
